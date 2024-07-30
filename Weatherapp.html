@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body
+    class="bg-gradient-to-br from-pink-400 via-pink-600 to-orange-400 flex justify-center items-center min-h-screen lg:px-0 px-4"
+  >
+    <div
+      class="container max-w-lg border-2 border-white rounded-lg text-white py-10 px-8 text-center transition duration-500 ease-in-out bg-white bg-opacity-40"
+    >
+      <div class="row_one flex justify-between items-center mb-4">
+        <input
+          type="search"
+          id="searchbar"
+          placeholder="Enter place...."
+          class="searchbar text-orange-500 font-bold h-10 w-4/5 outline-none px-4 border border-white rounded-full bg-opacity-40"
+        />
+        <button
+          id="searchbtn"
+          class="flex justify-center items-center w-10 h-10 rounded-full bg-white bg-opacity-40 border border-white"
+        >
+          <img src="magnifying-glass.png" class="searchbtn" />
+        </button>
+      </div>
+      <div class="error text-left mb-4 hidden">
+        <p>Invalid Place...</p>
+      </div>
+      <div class="Weather hidden">
+        <img
+          src="weather-app.png"
+          class="weather_icon w-48 h-auto mx-auto mt-8"
+        />
+        <h1 class="Temprature text-6xl font-bold mb-2">----</h1>
+        <h2 class="place text-3xl mb-6">----</h2>
+        <div class="weather_details flex justify-between">
+          <div class="col flex items-center gap-5">
+            <img class="humidity w-12" src="humidity.png" alt="humidity" />
+            <div>
+              <p class="humidity_value">----</p>
+              <h4 class="text-lg">Humidity</h4>
+            </div>
+          </div>
+          <div class="col flex items-center gap-5">
+            <img src="wind.png" alt="wind" class="w-12" />
+            <div>
+              <p class="wind">----</p>
+              <h4 class="text-lg">Wind</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/Weatherapp.js"></script>
+  </body>
+</html>
